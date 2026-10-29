@@ -1,0 +1,57 @@
+/* Jarak titik 9px — harus sama dengan SPACING di LiquidField.tsx. */
+.field {
+  --ink-cool: var(--color-accent);
+  --ink-warm: #b65a32;
+  --dot: color-mix(in srgb, var(--color-muted) 40%, transparent);
+
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-image: radial-gradient(circle at center, var(--dot) 0.8px, transparent 1.2px);
+  background-size: 9px 9px;
+  mask-image: linear-gradient(to bottom, #000 65%, transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme='light'])) .field {
+    --ink-warm: #e38a5c;
+  }
+}
+
+:global(:root[data-theme='dark']) .field {
+  --ink-warm: #e38a5c;
+}
+
+/* Kabut yang pelan bergeser menutupi sebagian titik → bercak halftone yang hidup. */
+.field::before {
+  content: '';
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(ellipse 28% 24% at 30% 38%, var(--color-bg) 15%, transparent 70%),
+    radial-gradient(ellipse 22% 30% at 72% 62%, var(--color-bg) 10%, transparent 70%),
+    radial-gradient(ellipse 30% 20% at 55% 20%, var(--color-bg) 10%, transparent 70%);
+  opacity: 0.9;
+  animation: drift 26s var(--ease-inout) infinite alternate;
+}
+
+@keyframes drift {
+  to {
+    transform: translate(8%, -6%) rotate(8deg);
+  }
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field::before {
+    animation: none;
+  }
+}

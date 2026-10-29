@@ -1,6 +1,7 @@
 import { profile, sections, ui } from '../data';
 import { useLocale } from '../hooks/useLocale';
 import { EmailLink } from '../components/ui/EmailLink';
+import { LiquidField } from '../components/ui/LiquidField';
 import { Magnetic } from '../components/ui/Magnetic';
 import button from '../components/ui/Button.module.css';
 import styles from './Contact.module.css';
@@ -11,7 +12,7 @@ export function Contact() {
   const [first, second] = t(ui.contactHeading);
 
   return (
-    <section id={meta.id} className="terrace" aria-labelledby="contact-title">
+    <section id={meta.id} className={`terrace ${styles.contact}`} aria-labelledby="contact-title">
       <p className="t-meta">05 / {t(meta.label)}</p>
       <h2 id="contact-title" className={`t-display ${styles.heading}`}>
         <span>{first}</span>
@@ -42,6 +43,7 @@ export function Contact() {
           </Magnetic>
         )}
       </div>
+      <LiquidField className={styles.field} />
     </section>
   );
 }

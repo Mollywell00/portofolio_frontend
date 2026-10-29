@@ -41,10 +41,6 @@ export const ui = {
   closeMenu: { en: 'Close', id: 'Tutup' },
   sectionsNav: { en: 'Sections', id: 'Bagian' },
   mainNav: { en: 'Main', id: 'Utama' },
-  eyesLabel: {
-    en: 'Two line-drawn eyes. They blink when nothing moves for a few seconds.',
-    id: 'Dua mata bergaris. Berkedip bila tidak ada gerakan beberapa detik.',
-  },
   pipeline: { en: 'Pipeline', id: 'Alur' },
   earTitle: { en: 'Eye Aspect Ratio, interactive', id: 'Eye Aspect Ratio, interaktif' },
   earSlider: { en: 'Eye openness — drag', id: 'Keterbukaan mata — geser' },

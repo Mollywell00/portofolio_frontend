@@ -1,6 +1,7 @@
 import { profile, sections } from '../data';
 import { useLocale } from '../hooks/useLocale';
 import { SectionHeading } from '../components/ui/SectionHeading';
+import { TerraceNetwork } from '../components/ui/TerraceNetwork';
 import styles from './About.module.css';
 
 export function About() {
@@ -21,6 +22,7 @@ export function About() {
           ))}
         </div>
       </div>
+      <TerraceNetwork variant="about" />
     </section>
   );
 }

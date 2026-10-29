@@ -4,7 +4,7 @@ import { useLocale } from '../hooks/useLocale';
 import { useMouseParallax } from '../hooks/useMouseParallax';
 import { EmailLink } from '../components/ui/EmailLink';
 import { Magnetic } from '../components/ui/Magnetic';
-import { WatchingEyes } from '../components/ui/WatchingEyes';
+import { LiquidField } from '../components/ui/LiquidField';
 import button from '../components/ui/Button.module.css';
 import styles from './Hero.module.css';
 
@@ -17,7 +17,7 @@ export function Hero() {
 
   return (
     <section id="intro" className={styles.hero} aria-labelledby="hero-name">
-      <WatchingEyes className={styles.eyes} label={t(ui.eyesLabel)} />
+      <LiquidField />
       <p ref={metaRef} className="t-meta">
         00 / <span>{t(profile.role)}</span>
       </p>

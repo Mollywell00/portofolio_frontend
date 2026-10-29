@@ -30,3 +30,8 @@
 .links a:first-child {
   font-size: var(--font-body);
 }
+
+/* Tinta cair seperti hero; pudar di atas & bawah agar menyatu dengan section lain. */
+.contact .field {
+  mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent);
+}

@@ -75,6 +75,7 @@ main:focus {
 /* Section "teras": garis 1px di atas, padding seragam. */
 .terrace {
   position: relative;
+  isolation: isolate;
   padding: var(--space-10) var(--margin) var(--space-8);
 }
 

@@ -2,6 +2,7 @@ import { publishedProjects, sections, ui } from '../data';
 import { useLocale } from '../hooks/useLocale';
 import { ProjectList } from '../components/project/ProjectList';
 import { SectionHeading } from '../components/ui/SectionHeading';
+import { TerraceNetwork } from '../components/ui/TerraceNetwork';
 
 export function SelectedWork() {
   const { t } = useLocale();
@@ -17,6 +18,7 @@ export function SelectedWork() {
         {t(meta.label)}
       </SectionHeading>
       <ProjectList projects={publishedProjects} />
+      <TerraceNetwork variant="work" />
     </section>
   );
 }

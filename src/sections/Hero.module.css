@@ -9,15 +9,6 @@
   padding: 0 var(--margin) var(--space-7);
 }
 
-.eyes {
-  position: absolute;
-  z-index: -1;
-  top: 42%;
-  right: var(--margin);
-  width: min(42vw, 600px);
-  transform: translateY(-50%);
-}
-
 .name .line {
   display: block;
   overflow: hidden;
@@ -105,14 +96,6 @@
   .hero {
     min-height: auto;
     padding-top: var(--space-4);
-  }
-
-  .eyes {
-    position: static;
-    z-index: auto;
-    width: min(100%, 360px);
-    margin: 0 0 var(--space-4) auto;
-    transform: none;
   }
 
   .lead {

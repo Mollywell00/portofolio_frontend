@@ -1,0 +1,143 @@
+.network {
+  position: absolute;
+  z-index: -1;
+  width: min(600px, var(--width, 45%));
+  opacity: 0.7;
+  pointer-events: none;
+  /* Memudar dari sudut jangkarnya, seperti cahaya yang meredup. */
+  mask-image: radial-gradient(ellipse 120% 120% at var(--anchor), #000 35%, transparent 75%);
+}
+
+.network svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* Bentuk digambar untuk kanan-bawah; sudut lain dicerminkan. */
+.br {
+  --anchor: 100% 100%;
+
+  right: var(--margin);
+  bottom: 0;
+}
+
+.bl {
+  --anchor: 0% 100%;
+
+  left: var(--margin);
+  bottom: 0;
+}
+
+.bl svg {
+  transform: scaleX(-1);
+}
+
+.tr {
+  --anchor: 100% 0%;
+
+  top: var(--space-6);
+  right: var(--margin);
+}
+
+.tr svg {
+  transform: scaleY(-1);
+}
+
+.tl {
+  --anchor: 0% 0%;
+
+  top: var(--space-6);
+  left: var(--margin);
+}
+
+.tl svg {
+  transform: scale(-1, -1);
+}
+
+.mesh,
+.ridge {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 1;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.mesh {
+  opacity: 0.22;
+}
+
+.ridge {
+  opacity: 0.5;
+}
+
+.dot {
+  fill: var(--color-muted);
+  opacity: 0.6;
+}
+
+.hub {
+  fill: var(--color-accent);
+  opacity: 0.85;
+}
+
+.halo {
+  fill: var(--color-accent);
+  opacity: 0.1;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* Beberapa simpul berdenyut pelan — seperti sinyal yang lewat di jaring. */
+.pulse {
+  animation: pulse 4s var(--ease-inout) var(--delay, 0s) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.4;
+    transform: scale(1.7);
+  }
+}
+
+/* Reveal (useReveal): jaring muncul dari tepinya saat section masuk layar. */
+:global(.terrace) > .network {
+  transition:
+    clip-path 1.6s var(--ease-terrace) 0.1s,
+    opacity 0.7s var(--ease-terrace);
+}
+
+:global(.reveal) :global(.terrace:not(.is-in)) > .network {
+  transform: none;
+}
+
+:global(.reveal) :global(.terrace:not(.is-in)) > .br {
+  clip-path: inset(0 0 0 100%);
+}
+
+:global(.reveal) :global(.terrace:not(.is-in)) > .bl {
+  clip-path: inset(0 100% 0 0);
+}
+
+:global(.reveal) :global(.terrace:not(.is-in)) > .tr {
+  clip-path: inset(0 0 0 100%);
+}
+
+:global(.reveal) :global(.terrace:not(.is-in)) > .tl {
+  clip-path: inset(0 100% 0 0);
+}
+
+@media (max-width: 767px) {
+  .network {
+    width: 80%;
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
+}

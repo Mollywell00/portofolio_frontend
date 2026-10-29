@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import { processSteps, publishedSkillGroups, sections } from '../data';
 import { useLocale } from '../hooks/useLocale';
 import { SectionHeading } from '../components/ui/SectionHeading';
+import { TerraceNetwork } from '../components/ui/TerraceNetwork';
 import styles from './Skills.module.css';
 
 export function Skills() {
@@ -34,6 +35,7 @@ export function Skills() {
           </li>
         ))}
       </ol>
+      <TerraceNetwork variant="skills" />
     </section>
   );
 }

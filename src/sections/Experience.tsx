@@ -2,6 +2,7 @@ import { publishedExperience, sections } from '../data';
 import type { ExperienceKind, Localized } from '../data/types';
 import { useLocale } from '../hooks/useLocale';
 import { SectionHeading } from '../components/ui/SectionHeading';
+import { TerraceNetwork } from '../components/ui/TerraceNetwork';
 import styles from './Experience.module.css';
 
 const kindLabel: Record<ExperienceKind, Localized> = {
@@ -33,6 +34,7 @@ export function Experience() {
           </li>
         ))}
       </ol>
+      <TerraceNetwork variant="experience" />
     </section>
   );
 }
