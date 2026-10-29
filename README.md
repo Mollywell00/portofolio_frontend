@@ -1,6 +1,6 @@
 # Fahnur Qoirul Anwar — Portfolio
 
-Portofolio interaktif (React 19 · TypeScript · Vite · GSAP). Aturan konten, privasi, dan desain ada di [PORTFOLIO_STANDARD.md](PORTFOLIO_STANDARD.md); keputusan per fase di [`docs/`](docs/).
+Portofolio interaktif (React 19 · TypeScript · Vite · GSAP).
 
 ## Perintah
 
