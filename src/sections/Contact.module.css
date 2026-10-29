@@ -1,0 +1,32 @@
+.heading {
+  margin-top: var(--space-5);
+  font-size: clamp(3.5rem, 10vw, 10rem);
+}
+
+.heading span,
+.heading em {
+  display: block;
+}
+
+.heading em {
+  padding-left: var(--terrace-step);
+  color: var(--color-accent);
+}
+
+.line {
+  margin-top: var(--space-6);
+  font-size: var(--font-lead);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5) 28px;
+  margin-top: var(--space-6);
+  font-size: 1.25rem;
+}
+
+.links a:first-child {
+  font-size: var(--font-body);
+}

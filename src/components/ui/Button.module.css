@@ -1,0 +1,56 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 12px 22px;
+  border: 1px solid var(--color-fg);
+  border-radius: 999px;
+  color: var(--color-fg);
+  text-decoration: none;
+  line-height: 1.2;
+  transition:
+    background-color var(--dur-micro),
+    border-color var(--dur-micro),
+    color var(--dur-micro);
+}
+
+.primary {
+  background: var(--color-fg);
+  color: var(--color-bg);
+}
+
+.button:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+/* Tombol kecil di header (EN/ID, tema, menu). */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  min-height: 40px;
+  padding: 6px 14px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  color: var(--color-fg);
+  text-decoration: none;
+  line-height: 1;
+  transition: border-color var(--dur-micro);
+}
+
+.pill:hover {
+  border-color: var(--color-fg);
+}
+
+.underline {
+  color: var(--color-fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-line);
+  transition: border-color var(--dur-micro);
+}
+
+.underline:hover {
+  border-color: var(--color-accent);
+}

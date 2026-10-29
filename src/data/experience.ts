@@ -1,0 +1,51 @@
+import type { Experience } from './types';
+
+export const experience: Experience[] = [
+  {
+    id: 'myesics',
+    period: { en: '2026 — present', id: '2026 — sekarang' },
+    title: { en: 'Frontend Web Engineer', id: 'Frontend Web Engineer' },
+    org: 'MyESICS',
+    kind: 'work',
+    detail: { en: 'Remote', id: 'Remote' },
+    source: 'pemilik 2026-10-28; commit pertama Mar 2026',
+    status: 'published',
+  },
+  {
+    id: 'enviroland',
+    period: { en: 'Sep — Nov 2025', id: 'Sep — Nov 2025' },
+    title: { en: 'Internship', id: 'Kerja Praktek' },
+    org: 'PT Enviroland',
+    kind: 'work',
+    detail: { en: 'Company website · Laravel', id: 'Website perusahaan · Laravel' },
+    source: 'CV; pemilik 2026-10-28',
+    status: 'published',
+  },
+  {
+    id: 'gdsc',
+    period: { en: '2024', id: '2024' },
+    title: { en: 'Member', id: 'Anggota' },
+    org: 'Google Developer Student Clubs',
+    kind: 'community',
+    source: 'CV; pemilik 2026-10-28 (tahun 2024)',
+    status: 'published',
+  },
+  {
+    id: 'unimma',
+    period: { en: '2022 — present', id: '2022 — sekarang' },
+    title: { en: 'Informatics Engineering', id: 'S1 Teknik Informatika' },
+    org: 'Universitas Muhammadiyah Magelang',
+    kind: 'education',
+    source: 'CV',
+    status: 'published',
+  },
+  {
+    id: 'smk',
+    period: { en: '2019 — 2022', id: '2019 — 2022' },
+    title: { en: 'Electrical Engineering', id: 'Teknik Elektro' },
+    org: 'SMK Negeri 1 Magelang',
+    kind: 'education',
+    source: 'CV',
+    status: 'published',
+  },
+];

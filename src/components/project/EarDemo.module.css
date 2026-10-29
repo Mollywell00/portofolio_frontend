@@ -1,0 +1,84 @@
+.demo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-7);
+  padding: var(--space-7);
+  border: 1px solid var(--color-line);
+}
+
+.title {
+  grid-column: 1 / -1;
+}
+
+.demo svg {
+  width: 100%;
+  height: auto;
+}
+
+.axis {
+  stroke: var(--color-line);
+  stroke-dasharray: 3 4;
+}
+
+.lid {
+  fill: none;
+  stroke: var(--color-fg);
+  stroke-width: 1.5;
+}
+
+.span {
+  stroke: var(--color-accent);
+  stroke-dasharray: 3 3;
+}
+
+.point {
+  fill: var(--color-accent);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  fill: var(--color-muted);
+}
+
+.slider {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  accent-color: var(--color-accent);
+}
+
+.value {
+  display: block;
+  margin-top: var(--space-5);
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.closed {
+  color: var(--color-accent);
+}
+
+.formula {
+  margin-top: var(--space-5);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.note {
+  margin-top: 14px;
+  max-width: 44ch;
+  font-size: var(--font-small);
+  color: var(--color-muted);
+}
+
+@media (max-width: 767px) {
+  .demo {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--space-5);
+  }
+}

@@ -1,0 +1,51 @@
+.cursor {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur-micro);
+}
+
+.cursor[data-visible='true'] {
+  opacity: 1;
+}
+
+.ring,
+.dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ring span {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  transition:
+    transform 0.35s var(--ease-terrace),
+    opacity var(--dur-micro),
+    background-color var(--dur-micro);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: var(--color-fg);
+}
+
+.cursor[data-state='link'] .ring span {
+  transform: scale(1.65);
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+}
+
+/* Di atas proyek: cincin memberi tempat untuk preview berbingkai. */
+.cursor[data-state='project'] .ring span {
+  transform: scale(0.4);
+  opacity: 0;
+}

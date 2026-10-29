@@ -1,0 +1,21 @@
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: var(--space-5) var(--space-7);
+}
+
+.split p + p {
+  margin-top: 1em;
+}
+
+.big {
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 767px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+}

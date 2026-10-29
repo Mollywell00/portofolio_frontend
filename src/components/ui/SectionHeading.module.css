@@ -1,0 +1,12 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-7);
+}
+
+.index {
+  display: block;
+  margin-bottom: 14px;
+}

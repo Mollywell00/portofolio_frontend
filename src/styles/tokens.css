@@ -1,0 +1,89 @@
+/* Design tokens — sumber: docs/phase-2/VISUAL_SPEC.md §2. Ubah di sini, bukan di komponen. */
+
+:root {
+  /* warna — light */
+  --color-bg: #eeebe4;
+  --color-surface: #e4e0d7;
+  --color-fg: #1e1d1b;
+  --color-muted: #5e5a53;
+  --color-line: #cfcac0;
+  --color-accent: #4f6b3a;
+  --color-focus: var(--color-accent);
+
+  /* font */
+  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+
+  /* skala tipe */
+  --font-display: clamp(4rem, min(12.5vw, 16.5vh), 12.5rem);
+  --font-h1: clamp(3.5rem, 9vw, 9rem);
+  --font-h2: clamp(2.75rem, 6vw, 5.5rem);
+  --font-h3: clamp(1.875rem, 3.4vw, 3.25rem);
+  --font-lead: clamp(1.0625rem, 1.6vw, 1.375rem);
+  --font-body: 1.0625rem;
+  --font-small: 0.9375rem;
+  --font-meta: 0.75rem;
+
+  /* spasi */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --space-11: 12rem;
+
+  /* layout */
+  --margin: clamp(16px, 4vw, 64px);
+  --gutter: 24px;
+  --terrace-step: clamp(1rem, 4vw, 4.5rem);
+  --measure: 62ch;
+  --ruler-height: 64px;
+
+  /* motion — padanan GSAP ada di src/animations/easings.ts */
+  --ease-terrace: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 200ms;
+  --dur-reveal: 700ms;
+  --dur-page: 900ms;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter: 16px;
+  }
+}
+
+/* warna — dark */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color-bg: #151513;
+    --color-surface: #1d1c1a;
+    --color-fg: #e8e4da;
+    --color-muted: #9c978c;
+    --color-line: #2e2d29;
+    --color-accent: #9db57f;
+  }
+}
+
+:root[data-theme='dark'] {
+  --color-bg: #151513;
+  --color-surface: #1d1c1a;
+  --color-fg: #e8e4da;
+  --color-muted: #9c978c;
+  --color-line: #2e2d29;
+  --color-accent: #9db57f;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-micro: 0ms;
+    --dur-reveal: 0ms;
+    --dur-page: 0ms;
+  }
+}

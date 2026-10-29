@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
+  min-height: calc(100svh - 84px - var(--ruler-height));
+  padding: 0 var(--margin) var(--space-7);
+}
+
+.eyes {
+  position: absolute;
+  z-index: -1;
+  top: 42%;
+  right: var(--margin);
+  width: min(42vw, 600px);
+  transform: translateY(-50%);
+}
+
+.name .line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+}
+
+.name .line > span {
+  display: block;
+  animation: rise 1s var(--ease-terrace) both;
+}
+
+.name .line:nth-child(2) {
+  padding-left: var(--terrace-step);
+}
+
+.name .line:nth-child(3) {
+  padding-left: calc(var(--terrace-step) * 2);
+}
+
+.name .line:nth-child(2) > span {
+  animation-delay: 0.08s;
+}
+
+.name .line:nth-child(3) > span {
+  animation-delay: 0.16s;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(105%);
+  }
+}
+
+.rule {
+  height: 1px;
+  border: 0;
+  background: var(--color-line);
+}
+
+.lead {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure)) auto;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-5);
+}
+
+.lead p:first-child {
+  max-width: 44ch;
+}
+
+.status {
+  text-align: right;
+  line-height: 1.7;
+}
+
+.status b {
+  font-weight: 500;
+  color: var(--color-fg);
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  vertical-align: 1px;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name .line > span {
+    animation: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    padding-top: var(--space-4);
+  }
+
+  .eyes {
+    position: static;
+    z-index: auto;
+    width: min(100%, 360px);
+    margin: 0 0 var(--space-4) auto;
+    transform: none;
+  }
+
+  .lead {
+    grid-template-columns: 1fr;
+  }
+
+  .status {
+    text-align: left;
+  }
+}

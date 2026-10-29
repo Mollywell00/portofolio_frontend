@@ -1,0 +1,12 @@
+# Data privat — JANGAN pernah diunggah ke Vercel (PORTFOLIO_STANDARD §3)
+Dokumen dari Anwar-1.pdf
+*.pdf
+myesics
+_private
+.env*
+
+# Tidak dibutuhkan untuk build
+node_modules
+dist
+dist-ssr
+docs

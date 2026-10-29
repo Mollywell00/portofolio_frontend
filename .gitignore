@@ -1,0 +1,22 @@
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Environment variables
+.env*
+!.env.example
+
+# Deployment
+.vercel/
+
+# Dokumentasi dan file privat
+docs/
+PORTFOLIO_STANDARD.md
+Dokumen dari Anwar-1.pdf
+myesics/
+_private/

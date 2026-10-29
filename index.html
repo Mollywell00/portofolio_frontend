@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fahnur Qoirul Anwar — Technician & Web Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Fahnur Qoirul Anwar, a technician and frontend web engineer from Indonesia."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      // Terapkan tema tersimpan sebelum render agar tidak berkedip.
+      try {
+        const t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This portfolio needs JavaScript. Contact: linkedin.com/in/fahnur-qoirul-anwar-202406285</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

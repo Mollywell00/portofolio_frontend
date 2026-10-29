@@ -1,0 +1,50 @@
+/* Kelas tipografi global. Komponen memakai ini atau token langsung di CSS Module-nya. */
+
+.t-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--font-display);
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+}
+
+.t-h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--font-h1);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+}
+
+.t-h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--font-h2);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+}
+
+.t-h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--font-h3);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.t-lead {
+  font-size: var(--font-lead);
+  line-height: 1.45;
+}
+
+.t-meta {
+  font-family: var(--font-mono);
+  font-size: var(--font-meta);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.t-prose {
+  max-width: var(--measure);
+}

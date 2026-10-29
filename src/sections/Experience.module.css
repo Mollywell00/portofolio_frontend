@@ -1,0 +1,29 @@
+.list {
+  border-top: 1px solid var(--color-line);
+}
+
+.list li {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: 22px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+}
+
+.kind {
+  color: var(--color-accent);
+}
+
+@media (max-width: 767px) {
+  .list li {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}

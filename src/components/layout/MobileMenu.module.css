@@ -1,0 +1,53 @@
+.trigger {
+  display: none;
+}
+
+.dialog {
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 20px var(--margin) 32px;
+  border: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-7);
+}
+
+.dialog::backdrop {
+  background: var(--color-bg);
+}
+
+.top {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.list a {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 10vw, 3.5rem);
+  line-height: 1.05;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .trigger {
+    display: inline-flex;
+  }
+}

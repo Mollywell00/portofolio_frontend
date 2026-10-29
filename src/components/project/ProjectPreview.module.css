@@ -1,0 +1,98 @@
+.anchor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.frame {
+  position: absolute;
+  width: 360px;
+  aspect-ratio: 16 / 10;
+  /* Di kanan cursor agar judul baris yang di-hover tetap terbaca. */
+  translate: 40px -50%;
+  opacity: 0;
+  scale: 0.9;
+  transition:
+    opacity 0.25s,
+    scale 0.4s var(--ease-terrace);
+}
+
+.frame[data-on='true'] {
+  opacity: 1;
+  scale: 1;
+}
+
+/* Bracket sudut — bahasa visual yang sama dengan cursor "deteksi". */
+.frame::before,
+.frame::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--color-accent);
+}
+
+.frame::before {
+  top: -8px;
+  left: -8px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.frame::after {
+  right: -8px;
+  bottom: -8px;
+  border-top: 0;
+  border-left: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  opacity: 0;
+  transition: opacity var(--dur-micro);
+}
+
+.slide[data-show='true'] {
+  opacity: 1;
+}
+
+.slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.glyph {
+  width: 70%;
+  fill: none;
+  stroke: var(--color-fg);
+  stroke-width: 2;
+}
+
+.glyph circle {
+  fill: var(--color-accent);
+  stroke: none;
+}
+
+.frame figcaption {
+  position: absolute;
+  bottom: -30px;
+  left: -8px;
+  color: var(--color-accent);
+}
